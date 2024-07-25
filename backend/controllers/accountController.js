@@ -86,11 +86,11 @@ class AccountController {
     try {
       const result = await accountModel.changePassword(accountId, currentPassword, newPassword);
       if (result == -1) {
-        return res.status(404).json({ "message": "Account does not exist", affectedRows: 0 });
+        return res.status(200).json({ "message": "Account does not exist", affectedRows: 0 });
       }
 
       if (result == 0) {
-        return res.status(401).json({ "message": "Incorrect password", affectedRows: 0 });
+        return res.status(200).json({ "message": "Incorrect password", affectedRows: 0 });
       }
 
       return res.status(200).json({ "message": "Change password successful", affectedRows: result });

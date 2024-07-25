@@ -1,6 +1,6 @@
 const database = require('../config/database');
 const { getPositionLine } = require('../utils/getter');
-const ITEMS_PER_PAGE = 1000;
+const ITEMS_PER_PAGE = 500;
 
 class Sales {
   constructor() {
